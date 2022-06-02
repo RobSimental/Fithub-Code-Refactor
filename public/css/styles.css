@@ -24,13 +24,63 @@ p.info-text-sm {
   font-family: "Noto Sans";
   font-size: 1rem
 }
+/* .fithub-icon {
+  padding-bottom: 10px;
+  height: 65px;
+  width: 65px;
+  position: relative;
+  bottom: 2px;
+  text-align: end;
+} */
+/*TITLE*/
+#title {
+  background-image: url("/images/home/title-background.jpg");
+  color: black;
+  text-align: left;
+}
+.title-image {
+  width: 90%;
+  transform: rotate(25deg);
+  position: relative;
+  top: 50%;
+  left: 10%;
+}
+
+/* Navigation Bar */
+.navbar {
+  /* padding-bottom: 1.5rem; */
+  padding: 7px 15px;
+  /* background-color: white; */
+}
+.navbar-brand {
+  font-family: "Noto Sans";
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  /* color: #6d6b6b; */
+}
+.nav-item {
+  padding: 0 18px;
+}
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Merriweather";
+}
+.navbar-brand {
+  font-family: "Noto Sans"
+}
+
+
+
 
 /* Headings Section */
 .big-heading {
   font-family: "Merriweather";
+  font-weight: 900;
   font-size: 3.5rem;
   line-height: 1.5;
-  color: #FFE194;
+  /* color: white; */
+  color: #9e8545;
 }
 
 .section-heading {
@@ -38,17 +88,15 @@ p.info-text-sm {
   line-height: 1.5;
 }
 
-.fa-2x {
+/* .fa-2x {
   padding-right: 5px;
-}
+} */
 
-.navbar-brand {
-  font-family: "Noto Sans"
-}
+
 
 /* containers */
 .container-fluid {
-  padding: 7% 15%;
+  padding: 7% 7%;
 }
 
 /* sections */
@@ -66,25 +114,6 @@ p.info-text-sm {
   color: black;
 }
 
-/* Navigation Bar */
-.navbar {
-  padding-bottom: 1.5rem;
-}
-
-.navbar-brand {
-  font-family: "Noto Sans";
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.nav-item {
-  padding: 0 18px;
-}
-
-.nav-link {
-  font-size: 1.2rem;
-  font-family: "Merriweather";
-}
 
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -95,20 +124,6 @@ input[type="search"]::-webkit-search-cancel-button {
   margin: 5% 3% 5% 0;
 }
 
-/*Title Section*/
-#title .container-fluid {
-  padding: 3% 15% 7%;
-  text-align: left;
-}
-
-/* Title Image */
-.title-image {
-  width: 90%;
-  transform: rotate(25deg);
-  position: relative;
-  top: 50%;
-  left: 10%;
-}
 .ad-image{
   align-self: center;
   height: 400px;
@@ -193,11 +208,15 @@ input[type="search"]::-webkit-search-cancel-button {
 @media (max-width: 1028px) {
   #title {
     text-align: center;
+
   }
 
   .title-image {
+    width: 95%;
+    height: 95%;
     position: static;
     transform: rotate(0);
+    border-radius: 25px;
   }
 }
 
@@ -260,6 +279,3 @@ form .bootstrap-select{
   width: 100%!important;
   min-width: 190px;
 }
-
-/* .ad {
-} */
