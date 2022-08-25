@@ -22,7 +22,7 @@ app.get("/profile", (req, res) => {
 app.get("/events", (req, res) => {
     res.render("events/events");
 })
-app.get("/event/:eventTitle", (req, res) => {
+app.get("/events/:eventTitle", (req, res) => {
     console.log(req.params);
     res.render("events/eventProfile");
 })
