@@ -1,3 +1,24 @@
+  /*event profile*/
+  .event-buttons{
+    margin:auto;
+    width: 50%;
+    margin-bottom: 5%;
+  }
+  #join-button{
+    color: white;
+    background-color: #05a11a;
+  }
+  #leave-button{
+    color: white;
+    background-color: #fd2e79;
+  }
+  #approve-button{
+    float: right;
+    color: white;
+    background-color: #05a11a;
+  }
+  
+
 .row-section{
     display: flex;
     flex-direction: row;

@@ -1,50 +1,43 @@
 const express = require("express");
+const rout = require("./routes/routes");
+const Event = require("./models/events");
 const app = express();
 const bodyParser = require("body-parser");
 
+
+// Middle Ware
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.render("index");
-})
+//Routes
+app.use("/", rout);
 
-app.get("/register", (req, res) => {
-    res.render("account/register");
-})
-app.get("/forgotPassword", (req, res) => {
-    res.render("account/forgotPassword");
-})
-app.get("/profile", (req, res) => {
-    res.render("account/myProfile");
-})
 app.get("/events", (req, res) => {
-    res.render("events/events");
+    Event.find({}, (err, events) => {
+        err ? console.log(err) : res.render("events/events", {events: events});
+    })
 })
-app.get("/events/:eventTitle", (req, res) => {
-    console.log(req.params);
+app.get("/events/:eventID", (req, res) => {
+    const eventID = req.params.eventID;
+    console.log(eventID);
     res.render("events/eventProfile");
 })
 app.get("/create", (req, res) => {
     res.render("events/createEvent");
 })
-app.get("/match", (req, res) => {
-    res.render("match/match")
+app.post("/create", (req, res) => {
+    const postEvent = new Event({
+        title: req.body.title,
+        description: req.body.description,
+        location: req.body.location,
+        zipcode: req.body.zipcode,
+        date: req.body.date,
+    });
+    postEvent.save((err) => {
+        err ? console.log(err) : res.redirect("/events")
+    });
 })
-app.get("/support", (req, res) => {
-    res.render("other/support")
-})
-app.get("/tnc", (req, res) => {
-    res.render("other/tnc")
-})
-app.get("/404", (req, res) => {
-    res.render("other/underConstruction")
-})
-
-
-
-
 
 app.listen(3000, () => {
     console.log("Started Server on Port 3000");

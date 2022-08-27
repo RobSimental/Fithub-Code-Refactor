@@ -1,74 +1,10 @@
-/*create events*/
-.time-text{
-    float: right;
-    color: #6c757d;
-    opacity: 1;
-  }
-  .meet-section{
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-  }
-  /*event profile*/
-  .event-buttons{
-    margin:auto;
-    width: 50%;
-    margin-bottom: 5%;
-  }
-  #join-button{
-    color: white;
-    background-color: #05a11a;
-  }
-  #leave-button{
-    color: white;
-    background-color: #fd2e79;
-  }
-  #approve-button{
-    float: right;
-    color: white;
-    background-color: #05a11a;
-  }
-  /*events*/
-  .list-group{
-      margin-left: 10%;
-      margin-right: 10%;
-  }
-  #post-event{
-      float: right;
-      margin-top: 2%;
-      margin-right: 8%;
-  }
+.main-content-space {
+  width: 100%;
+}
 
 
-  .event-details{
-      float:left;
-      margin-right: 1%;
-  }
-  /* .event-organizer::after{
-      float: left;
-      content: "";
-      clear: both;
-      display: table;
-  } */
-  .event-creator-image {
-      width: 75px;
-      height: 75px;
-      object-fit: cover;
-  }
 
-  .arrows{
-      width: 50px;
-      height: 50px;
-  }
-  #left-arrow{
-      transform: rotate(180deg);
-  }
-  #event-info{
-    margin: auto;
-    width: 80%;
-  }
+
   /*General Events CSS*/
   .button {
     border: none;

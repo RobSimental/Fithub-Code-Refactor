@@ -1,8 +1,4 @@
-.event-space {
-  width: 100%;
-}
-
-#events-list{
+#event-list{
   margin: auto;
   width: 80%;
 }

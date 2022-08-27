@@ -1,29 +1,29 @@
 <%- include('../partials/header') -%>
 <%- include('../partials/navbar') -%>
-<link rel="stylesheet" href="../css/events.css">
+<link rel="stylesheet" href="../css/eventList.css">
 
 <section class="container">
     <%- include('../partials/eventsSideMenu') -%>
 
-    <div class="event-space">
+    <div class="main-content-space">
     <!-- Event List-->
-        <div id="events-list">
-            <% for (let i = 0; i < 4; i ++) { %>
-            <div class="event-card">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="row w-100">
-                        <div class="col-lg-3">
-                            <img class="event-image" src="/images/uc.jpeg" alt="Event Image Not Found">
+        <div id="event-list">
+            <% events.forEach(event => { %>
+                <div class="event-card">
+                    <a href="/events/<%=event.id%>" class="list-group-item list-group-item-action">
+                        <div class="row w-100">
+                            <div class="col-lg-3">
+                                <img class="event-image" src="/images/uc.jpeg" alt="Event Image Not Found">
+                            </div>
+                            <div class="col-lg-6">
+                                <h5 class="event-date"> <%=event.date.toLocaleDateString("en-US", {weekday: "long",month: "long",day:"numeric"}) %> </h5>
+                                <h5 class="event-title"> <%=event.title %> </h5>
+                                <h5 class="event-description"> <%=event.description %> </h5>
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <h5 class="event-date">No Event Date</h5>
-                            <h5 class="event-title">No Event Title</h5>
-                            <h5 class="event-description">No Event Description</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <% } %>
+                    </a>
+                </div>
+            <% })%>
         </div>
 
     <!-- Pagination -->
