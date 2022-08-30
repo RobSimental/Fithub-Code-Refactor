@@ -1,4 +1,9 @@
   /*event profile*/
+  .event-profile {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
   .event-buttons{
     margin:auto;
     width: 50%;

@@ -20,8 +20,9 @@ app.get("/events", (req, res) => {
 })
 app.get("/events/:eventID", (req, res) => {
     const eventID = req.params.eventID;
-    console.log(eventID);
-    res.render("events/eventProfile");
+    Event.findById((eventID), (err, event) => {
+        err ? console.log(err) : res.render("events/eventProfile", {event: event});
+    });
 })
 app.get("/create", (req, res) => {
     res.render("events/createEvent");
@@ -35,7 +36,7 @@ app.post("/create", (req, res) => {
         date: req.body.date,
     });
     postEvent.save((err) => {
-        err ? console.log(err) : res.redirect("/events")
+        err ? console.log(err) : res.redirect("events")
     });
 })
 

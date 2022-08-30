@@ -1,92 +1,26 @@
 <%- include('../partials/header') -%> 
+<%- include('../partials/navbar') -%>
+<link rel="stylesheet" href="../css/eventProfile.css">
 
-  <section class="colored-section" id="ptitle">
-    <div class="container-fluid">
-      <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <i class="fas fa-dumbbell fa-2x"></i>
-        <a class="navbar-brand" href="../index.html">FitHub</a>
+<section class="container">
+    <%- include('../partials/eventsSideMenu') -%>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../html/myProfile.html">My Account</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/matching.html">Find a Buddy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../html/events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logOut">Log out</a>
-            </li>
-            <li class="nav-item">
-              <form class="form-inline d-flex dropdown">
-                <input class="form-control form-control-sm" type="text" placeholder="Search Events (biking)"
-                  id="searchbar" data-toggle="dropdown">
-                <ul class="dropdown-menu" id="displist" role="menu" aria-labelledby="menu1">
-                </ul>
-              </form>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="side">
-        <div class="header">
-          <div class="avatar">
-            <img id="avatarimguser" src="../images/circle-cropped.png" alt="">
-          </div>
-          <a class="title" href="events.html">Events</a>
-        </div>
-        <div class="flex-shrink-0 p-3">
-          <ul class="list-unstyled ps-0">
-            <li class="mb-1">
-              <a href="CreateEvents.html">
-                <button class="btn btn-toggle align-items-center rounded collapsed" aria-expanded="false">
-                  Create an Event
-                </button>
-              </a>
-            </li>
-            <li class="mb-1">
-              <a href="myEvents.html">
-                <button class="btn btn-toggle align-items-center rounded collapsed" aria-expanded="false">
-                  My Events
-                </button>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="main-content-space">
 
       <!-- Events -->
-      <div class="creatingevent">
+      <div class="event-profile">
         <div class="col-lg-8" id="event-info">
           <div class="card shadow-sm">
             <div class="card-header bg-transparent border-0">
               <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Event Information</h3>
             </div>
             <div class="card-body pt-0" id="viewEventProfile">
-              
             </div>
           </div>
         </div>
       </div>
-  </section>
-  </div>
+      </div>
+</section>
 
 
-  <!-- Footer -->
-  <footer class="white-section" id="footer">
-    <div class="container-fluid">
-      <p>© Copyright 2021 FitHub</p>
-    </div>
-  </footer>
-</body>
+
