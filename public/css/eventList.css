@@ -1,0 +1,27 @@
+#event-list{
+  margin: auto;
+  width: 80%;
+}
+.event-card{
+  margin-bottom: 2%;
+}
+.event-image{
+  /* float: right; */
+  width:150px;
+  height: 150px;
+}
+.event-title {
+  font-weight: bolder;
+  color: black;
+}
+.event-description {
+  /* margin-top: 20%;
+  margin-bottom: 10%; */
+  font-weight: lighter;
+  font-size: medium;
+}
+.event-date {
+  margin-top: 5px;
+  font-weight: bolder;
+  color: #4C4C6D;
+}

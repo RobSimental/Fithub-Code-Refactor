@@ -1,0 +1,42 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+<link rel="stylesheet" href="../css/eventList.css">
+
+<section class="container">
+    <%- include('../partials/eventsSideMenu') -%>
+
+    <div class="main-content-space">
+    <!-- Event List-->
+        <div id="event-list">
+            <% events.forEach(event => { %>
+                <div class="event-card">
+                    <a href="/events/<%=event.id%>" class="list-group-item list-group-item-action">
+                        <div class="row w-100">
+                            <div class="col-lg-3">
+                                <img class="event-image" src="/images/uc.jpeg" alt="Event Image Not Found">
+                            </div>
+                            <div class="col-lg-6">
+                                <h5 class="event-date"> <%=event.date.toLocaleDateString("en-US", {weekday: "long",month: "long",day:"numeric"}) %> </h5>
+                                <h5 class="event-title"> <%=event.title %> </h5>
+                                <h5 class="event-description"> <%=event.description %> </h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% })%>
+        </div>
+
+    <!-- Pagination -->
+    <nav>
+        <ul class="pagination justify-content-center">
+            <% for (let i = 1; i<5;i++) { %>
+            <li class="page-item"><a class="page-link" href="#"><%= i %></a></li>
+            <% } %>
+        </ul>
+      </nav>
+    </div>
+
+
+</section>
+
+<%- include('../partials/footer') -%>

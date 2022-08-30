@@ -1,0 +1,22 @@
+/*create events*/
+.time-text{
+    float: right;
+    color: #6c757d;
+    opacity: 1;
+  }
+  .meet-section{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .event-create-menu {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+  #submit-event {
+    display: flex;
+    margin: 0 auto;
+  }
