@@ -1,27 +1,31 @@
-  /*event profile*/
-  .event-profile {
-    text-align: center;
-    width: 80%;
-    margin: auto;
-  }
-  .event-buttons{
-    margin:auto;
-    width: 50%;
-    margin-bottom: 5%;
-  }
-  #join-button{
-    color: white;
-    background-color: #05a11a;
-  }
-  #leave-button{
-    color: white;
-    background-color: #fd2e79;
-  }
-  #approve-button{
-    float: right;
-    color: white;
-    background-color: #05a11a;
-  }
+/*event profile*/
+.event-profile {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.event-buttons{
+  margin:auto;
+  width: 50%;
+  margin-bottom: 5%;
+}
+#join-button{
+  color: white;
+  background-color: #05a11a;
+}
+#leave-button{
+  color: white;
+  background-color: #fd2e79;
+}
+#delete-button{
+ color: white;
+ background-color: red;
+}
+#approve-button{
+  float: right;
+  color: white;
+  background-color: #05a11a;
+}
   
 
 .row-section{

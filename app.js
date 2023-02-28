@@ -1,5 +1,5 @@
 const express = require("express");
-const rout = require("./routes/routes");
+const route = require("./routes/routes");
 const Event = require("./models/events");
 const app = express();
 const bodyParser = require("body-parser");
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //Routes
-app.use("/", rout);
+app.use("/", route);
 
 app.get("/events", (req, res) => {
     Event.find({}, (err, events) => {

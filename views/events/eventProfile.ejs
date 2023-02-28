@@ -1,26 +1,48 @@
-<%- include('../partials/header') -%> 
+<%- include('../partials/header') -%>
 <%- include('../partials/navbar') -%>
 <link rel="stylesheet" href="../css/eventProfile.css">
 
 <section class="container">
-    <%- include('../partials/eventsSideMenu') -%>
+  <%- include('../partials/eventsSideMenu') -%>
 
-    <div class="main-content-space">
+  <div class="main-content-space">
 
-      <!-- Events -->
-      <div class="event-profile">
-        <div class="col-lg-8" id="event-info">
-          <div class="card shadow-sm">
-            <div class="card-header bg-transparent border-0">
-              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Event Information</h3>
-            </div>
-            <div class="card-body pt-0" id="viewEventProfile">
+    <!-- Events -->
+    <div class="event-profile">
+      <div class="card shadow-sm w-100">
+        <div class="card-header bg-transparent border-0">
+          <h1> <%= event.title %> </h1>
+        </div>
+        <div id="viewEventProfile">
+          <h5>
+            <%= event.date.toLocaleDateString("en-US", {weekday: "long",month: "long",day:"numeric"})  %>
+          </h5>
+          <p>
+            <%= event.description %>
+          </p>
+        </div>
+
+
+        <!-- Event-options -->
+        <div class="row">
+          <div class="col">
+            One of three columns
+          </div>
+
+          <div class="col">
+            One of three columns
+          </div>
+
+          <div class="col">
+            <div id="delete-button">
+              <i class="fa-solid fa-trash"></i>
+              Delete
             </div>
           </div>
         </div>
+
       </div>
-      </div>
+    </div>
+  </div>
+  </div>
 </section>
-
-
-
