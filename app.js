@@ -35,6 +35,8 @@ app.post("/create", (req, res) => {
         zipcode: req.body.zipcode,
         date: req.body.date,
     });
+    //TODO temp bugfix, might cause problems later 
+    postEvent.date.setDate(postEvent.date.getDate() + 1);
     postEvent.save((err) => {
         err ? console.log(err) : res.redirect("events")
     });
