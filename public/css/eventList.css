@@ -1,6 +1,5 @@
 #event-list{
-  margin: auto;
-  width: 80%;
+  max-width: 80%;
 }
 .event-card{
   margin-bottom: 2%;
@@ -24,4 +23,15 @@
   margin-top: 5px;
   font-weight: bolder;
   color: #4C4C6D;
+}
+.event-list-options{
+  margin-bottom: 2rem;
+}
+.event-option-btn{
+  margin-right: 1rem;
+}
+@media screen and (max-width: 1080px) {
+  #event-list{
+    max-width: 100%;
+  }
 }

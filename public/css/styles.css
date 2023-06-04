@@ -1,5 +1,7 @@
 .main-content-space {
   width: 100%;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 
@@ -46,16 +48,23 @@
       color: #4C4C6D;
       padding-left: 5px;
     }
+    .navb {
+      background-color: #d1d1ee;
+    }
     
     .nav-item {
       padding: 0 18px;
-    
     }
     
     .navbar .nav-item .nav-link {
       font-size: 1.2rem;
       font-family: "Merriweather";
       color: #4C4C6D;
+      text-align: center;
+    }
+    .navbar-toggler-icon {
+      background-color: #4C4C6D;
+      border-radius: 25%;
     }
     
     input[type="search"]::-webkit-search-cancel-button {
@@ -74,18 +83,18 @@
     
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa;
-      margin: 0;
+      background-color: #f1f1ff;
+      /* margin: 0; */
     }
     
-    .container {
+    /* .container {
       display: flex;
       margin: 0;
       padding: 0
-    }
+    } */
     
     /* side Bar */
-    
+
     .side {
       width: 320px;
       height: 200px;
