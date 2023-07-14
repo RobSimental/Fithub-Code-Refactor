@@ -3,11 +3,12 @@
 }
 .event-card{
   margin-bottom: 2%;
+  background-color: #f1f1ff;
 }
 .event-image{
   /* float: right; */
   width:150px;
-  height: 150px;
+  height: 120px;
 }
 .event-title {
   font-weight: bolder;
@@ -18,6 +19,7 @@
   margin-bottom: 10%; */
   font-weight: lighter;
   font-size: medium;
+  color: #4C4C6D;
 }
 .event-date {
   margin-top: 5px;
@@ -29,6 +31,10 @@
 }
 .event-option-btn{
   margin-right: 1rem;
+  background-color: #d1d1ee;
+  color: #4c4c6d;
+  font-size: large;
+  font-weight: bold;
 }
 @media screen and (max-width: 1080px) {
   #event-list{
